@@ -12,18 +12,18 @@ int descending(int arr[], int a, int n) {
 
 void find(int arr[], int n) {
 
-    //int index;
     for (int i = 0; i < n; i++)
     {
         if (arr[i] < arr[i+1])
-        {
-            continue;
+        {   
+            if (descending(arr, i+1, n) == 1)
+                cout << "k = " << i << endl;
+                continue;
         }
         else if (arr[i] > arr[i+1]) 
         {
-            if (descending(arr, i+1, n) == 1) // We need to check if the array after i is descending
+            if (descending(arr, i+1, n) == 1)
             {
-                //index = i;
                 cout << "k = " << i << endl;
                 break;
             }
@@ -47,9 +47,6 @@ int main() {
     {
         cin >> a[i];
     }
-
-    //int d = descending(a, 0, n);
-    //cout << d;
 
     find(a, n);
 
