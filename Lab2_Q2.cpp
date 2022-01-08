@@ -107,8 +107,11 @@ int main() {
         cin >> arr[i];
     }
     lmps(arr, n);
+    cout << endl;
     rmps(arr, n);
+    cout << endl;
     mps(arr, n);
+    cout << endl;
     int max = mps_DaC(arr, 0, n);
     cout << max;
     return 0;
